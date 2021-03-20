@@ -1,0 +1,60 @@
+.contenedor {
+	background-image: url(../images/NissanSentra2019Azul.jpg);
+	background-size: 363px 218px;
+	height: 218px;
+  	width: 363px;
+  	text-align: center;
+  	position: relative;
+  	box-shadow: 2px 5px 10px black;
+  	border-radius: 5px; 
+  	text-shadow: 5px 5px 10px black;
+}
+
+.precio {
+	position: absolute;
+	top: 58%;
+	left: 2%;
+	font-size: 24px;
+	font-weight: 500;
+}
+
+.marca-modelo {
+	position: absolute;
+	top: 72%;
+	left: 2%;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.anio-trans {
+	position: absolute;
+	top: 82%;
+	left: 2%;
+	font-size: 14px;
+}
+.ciudad {
+	position: absolute;
+	top: 90%;
+	left: 2%;
+	font-size: 14px;
+}
+
+.mensualidad {
+	position: absolute;
+	bottom: 2%;
+	right: 2%;
+	font-size: 16px;
+}
+
+.iconfav {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	right: 2%;
+	top: 3%;
+}
+
+.iconfav img {
+	width: 100%;
+	pointer-events: all;
+}
