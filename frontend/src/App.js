@@ -5,6 +5,7 @@ import VehicleCard from './components/VehicleCard';
 import Maker_model from './components/Maker_model';
 import CheckBox_MM from './components/CheckBox_MM';
 
+//App.js
 function App() {
   fetch('http://127.0.0.1:8000/cars/')
   .then(response => response.json())
