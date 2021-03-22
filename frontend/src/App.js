@@ -4,6 +4,7 @@ import Formulario from './components/Formulario';
 import VehicleCard from './components/VehicleCard';
 import Maker_model from './components/Maker_model';
 import CheckBox_MM from './components/CheckBox_MM';
+import By_Year from "./components/By_Year";
 
 //App.js
 function App() {
@@ -13,19 +14,17 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <h1> Frontend </h1>
+        <br/>
         <Formulario/>
-        <VehicleCard/>
+        <br/>
         <Maker_model/>
-        <CheckBox_MM/>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <br/>
+        <By_Year/>
+        <br/>
+        <h1>Vehicle Card</h1>
+        <VehicleCard/>
+        <br/>
       </header>
     </div>
   );
