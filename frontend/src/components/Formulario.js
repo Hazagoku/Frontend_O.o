@@ -53,6 +53,7 @@ const Formulario = () => {
             mode: "no-cors",
             body: data
             })
+        console.log("Auto agregado")
     }
 
     return (
@@ -232,7 +233,7 @@ const Formulario = () => {
                     onChange={handleInputChange}/>
                 </div>
                 <div>
-                    <button onClick = { () => postData() } > Presioname porfa </button>
+                    <button onClick = { () => postData() } > Enviar </button>
                 </div>
        
             </from>
