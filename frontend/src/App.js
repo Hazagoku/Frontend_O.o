@@ -26,26 +26,6 @@ const Styles = styled.div`
 
 //App.js
 function App() {
-  const [users, setUsers] = useState(JsonData.slice(0, 50));
-  const [pageNumber, setPageNumber] = useState(0)
-  //fetch('http://127.0.0.1:8000/cars/')
-  //.then(response => response.json())
-  //.then(data => console.log(data));
-
-  const usersPerPage = 10
-  const pagesVisited = pageNumber * usersPerPage
-  const displayUsers = users
-    .slice(pagesVisited, pagesVisited + usersPerPage)
-    .map((user) => {
-      return(
-        <div className="user">
-          <h3>{user.Make}</h3>
-          <h3>{user.Model}</h3>
-          <h3>{user.ModelY}</h3>
-        </div>
-      );
-    })
-
     const pageCount = Math.ceil(usersPerPage);
     const changePage = ({selected}) => {
       setPageNumber(selected);
@@ -54,7 +34,6 @@ function App() {
   return (
 
     <div className="App">
-      {displayUsers}
       <Styles>
         <div className="App">
           <div className="wrapper">
@@ -69,17 +48,7 @@ function App() {
           </div>
         </div>
       </Styles>
-      <Reactpagine
-        previousLabel = {"Anterior"}
-        nextLabel = {"Siguiente"}
-        pageCount = {pageCount}
-        onPageChange = {changePage}
-        containerClassName = {"paginationBttns"}
-        previousLinkClassName = {"previusBttn"}
-        nextLinkClassName = {"nextBttn"}
-        disabledClassName = {"paginationDisabled"}
-        activeClassName = {"paginationActivate"}
-      />
+      <Paginacion></Paginacion>
     </div>
   );
 }
