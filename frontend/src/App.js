@@ -9,46 +9,51 @@ import CheckBox_MM from './components/CheckBox_MM.js';
 import By_Year from "./components/By_Year";
 import FiltroPrecio from './components/FiltroPrecio.js';
 import Kilometraje from './components/Kilometraje.js';
+import Paginacion from './components/Paginacion.js';
 import { useState } from 'react';
 
 
 const Styles = styled.div`
   .App {
+    margin-top: 2vh;
     display: flex;
-    align-items: left;
+    justify-content: space-around;
   }
   .wrapper {
-    margin-top: 20vh;
-    width: 35%;
+    margin-left: 2vh;
+    width: 20%;
+  }
+  .paginas {
+    margin-right: 2vh;
+    width: 70%
   }
 `;
 
 
 //App.js
 function App() {
-    const pageCount = Math.ceil(usersPerPage);
-    const changePage = ({selected}) => {
-      setPageNumber(selected);
-    };
-
   return (
 
     <div className="App">
+      <h1>KAVAK</h1>
       <Styles>
         <div className="App">
           <div className="wrapper">
-            <h2>Maximo</h2>
+            <h3>Maximo</h3>
             <FiltroPrecio color="#0074D9" />
-            <h2>Minimo</h2>
+            <h3>Minimo</h3>
             <FiltroPrecio color="#3D9970" />
-            <h2>Kilometraje maximo</h2>
+            <h3>Kilometraje maximo</h3>
             <Kilometraje color="#0074D9" />
-            <h2>Kilometraje minimo</h2>
+            <h3>Kilometraje minimo</h3>
             <Kilometraje color="#3D9970" />
+          </div>
+          <div className="paginas">
+            <Paginacion></Paginacion>
           </div>
         </div>
       </Styles>
-      <Paginacion></Paginacion>
+      
     </div>
   );
 }

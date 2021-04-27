@@ -1,7 +1,7 @@
 import React, {Fragment, useEffect, useState} from 'react';
-//import './App.css';
+import '../assets/css/Paginacion.css';
 //import JsonData from "./MOCK_DATA.json";
-import Reactpagine from "react-paginate";
+import ReactPaginate from "react-paginate";
 
 
 const Paginacion = () => {
@@ -28,13 +28,13 @@ const Paginacion = () => {
 
 
       //console.log(data)
-    const usersPerPage = 4
+    const usersPerPage = 3
     const pagesVisited = pageNumber * usersPerPage
     const displayUsers = users
       .slice(pagesVisited, pagesVisited + usersPerPage)
       .map((user) => {
         return(
-          <div className="user">
+          <div className="tarjeta">
             <p>{user.model}</p>
             <p>{user.brand}</p>
             <p>{user.year}</p>
@@ -50,19 +50,23 @@ const Paginacion = () => {
   
     return (
       <Fragment>
-        <div className="user">
-        <h1>{displayUsers}</h1>
-        </div>
-        <Reactpagine
+          <div className="tarjetas">
+            {displayUsers}
+          </div>
+        <ReactPaginate
           previousLabel = {"Anterior"}
           nextLabel = {"Siguiente"}
+          breakLabel={'...'}
+          breakClassName={'break-me'}
           pageCount = {pageCount}
+          marginPagesDisplayed={2}
+          pageRangeDisplayed={5}
           onPageChange = {changePage}
-          containerClassName = {"paginationBttns"}
-          previousLinkClassName = {"previusBttn"}
-          nextLinkClassName = {"nextBttn"}
-          disabledClassName = {"paginationDisabled"}
-          activeClassName = {"paginationActivate"}
+          containerClassName = {"paginacion-contenedor"}
+          pageClassName = {"paginacion-paginas"}
+          activeClassName = {"paginacion-activa"}
+          previousClassName = {"paginacion-anterior"}
+          nextClassName = {"paginacion-siguiente"}
         />
       </Fragment>
     );
