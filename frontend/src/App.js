@@ -39,8 +39,6 @@ function App() {
       <h1>KAVAK</h1>
       <Styles>
         <div className="App">
-        <h1> Frontend </h1>
-        <br/>
           <div className="wrapper">
             <Formulario/>
             <br/>
