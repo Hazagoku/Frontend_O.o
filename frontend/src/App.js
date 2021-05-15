@@ -10,6 +10,7 @@ import By_Year from "./components/By_Year";
 import FiltroPrecio from './components/FiltroPrecio.js';
 import Kilometraje from './components/Kilometraje.js';
 import Paginacion from './components/Paginacion.js';
+import By_Color from "./components/By_Color";
 import { useState } from 'react';
 
 
@@ -39,6 +40,15 @@ function App() {
       <Styles>
         <div className="App">
           <div className="wrapper">
+            <Formulario/>
+            <br/>
+            <Maker_model/>
+            <br/>
+            <By_Year/>
+            <br/>
+            <h2>Vehicle Card</h2>
+            <VehicleCard/>
+            <br/>
             <h3>Maximo</h3>
             <FiltroPrecio color="#0074D9" />
             <h3>Minimo</h3>
@@ -47,6 +57,7 @@ function App() {
             <Kilometraje color="#0074D9" />
             <h3>Kilometraje minimo</h3>
             <Kilometraje color="#3D9970" />
+            <By_Color/>
           </div>
           <div className="paginas">
             <Paginacion></Paginacion>
@@ -59,19 +70,3 @@ function App() {
 }
 
 export default App;
-
-
-
-//<header className="App-header">
-//<h1> Frontend </h1>
-//<br/>
-//<Formulario/>
-//<br/>
-//<Maker_model/>
-//<br/>
-//<By_Year/>
-//<br/>
-//<h1>Vehicle Card</h1>
-// <VehicleCard/>
-//<br/>
-// </header>
