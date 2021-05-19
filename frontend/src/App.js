@@ -12,6 +12,12 @@ import Kilometraje from './components/Kilometraje.js';
 import Paginacion from './components/Paginacion.js';
 import By_Color from "./components/By_Color";
 import { useState } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom"
 
 
 const Styles = styled.div`
@@ -34,38 +40,70 @@ const Styles = styled.div`
 //App.js
 function App() {
   return (
-
-    <div className="App">
-      <h1>KAVAK</h1>
-      <Styles>
-        <div className="App">
-          <div className="wrapper">
-            <Formulario/>
-            <br/>
-            <Maker_model/>
-            <br/>
-            <By_Year/>
-            <br/>
-            <h2>Vehicle Card</h2>
-            <VehicleCard/>
-            <br/>
-            <h3>Maximo</h3>
-            <FiltroPrecio color="#0074D9" />
-            <h3>Minimo</h3>
-            <FiltroPrecio color="#3D9970" />
-            <h3>Kilometraje maximo</h3>
-            <Kilometraje color="#0074D9" />
-            <h3>Kilometraje minimo</h3>
-            <Kilometraje color="#3D9970" />
-            <By_Color/>
-          </div>
-          <div className="paginas">
-            <Paginacion></Paginacion>
-          </div>
-        </div>
-      </Styles>
+    
+    <Router>
       
-    </div>
+      <div className = "Contenedor">
+        <div className = "btn-group">
+        <big><b>KAVAK</b></big>
+          <Link to = "/" className = "btn-dark">
+            Inicio
+          </Link>
+          <Link to = "/Agregar" className = "btn-dark">
+            Agregar
+          </Link>
+          <Link to = "/Ver" className = "btn-dark">
+            Ver
+          </Link>
+          
+        </div>
+        <Switch>
+          <Route path = "/" exact>
+            Inicio de la pagina
+          </Route>
+          <Route path = "/Agregar">
+            
+            <Formulario></Formulario>
+          </Route>
+          <Route path = "/ver" exact>
+            <p>.</p>
+            <Paginacion></Paginacion>
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+
+    //<div className="App">
+      //<h1>KAVAK</h1>
+      //<Styles>
+        //<div className="App">
+          //<div className="wrapper">
+            //<Formulario/>
+            //<br/>
+           // <Maker_model/>
+            //<br/>
+           // <By_Year/>
+           // <br/>
+           // <h2>Vehicle Card</h2>
+            //<VehicleCard/>
+            //<br/>
+            //<h3>Maximo</h3>
+            //<FiltroPrecio color="#0074D9" />
+           // <h3>Minimo</h3>
+           // <FiltroPrecio color="#3D9970" />
+           // <h3>Kilometraje maximo</h3>
+           // <Kilometraje color="#0074D9" />
+            //<h3>Kilometraje minimo</h3>
+            //<Kilometraje color="#3D9970" />
+            //<By_Color/>
+          //</div>
+         // <div className="paginas">
+           // <Paginacion></Paginacion>
+         // </div>
+        //</div>
+      //</Styles>
+      
+    //</div>
   );
 }
 
