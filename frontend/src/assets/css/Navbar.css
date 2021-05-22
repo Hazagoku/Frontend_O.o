@@ -1,0 +1,57 @@
+.NavbarItems{
+    background: white;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.navbar_logo{
+    justify-self:start;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.nav_menu{
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+    grid-gap: 10px;
+    list-style: none;
+    text-align: center;
+    width: 70vw;
+    justify-content: end;
+    margin: auto 2em;
+}
+
+.nav_links{
+    color:black;
+    text-decoration:none;
+    padding: 0.5rem 1rem;
+}
+
+.nav_links:hover{
+    cursor: pointer;
+}
+
+.nav_links:active{
+    color: #3374db;
+    font-weight: bold;
+}
+
+.barra_horizontal{
+    display: block;
+    height: 60px;
+    background-color: #3374db;
+}
+
+.lugar{
+    display: block;
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5em;
+    padding:1%;
+}
+

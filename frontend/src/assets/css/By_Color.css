@@ -1,0 +1,85 @@
+ul.colores{
+    padding: 2%;
+    width: 100%;
+}
+
+li.colors{
+    display: inline;
+}
+
+a.Amarillo, a.Azul, a.Beige, a.Blanco, a.Cafã, a.Café, 
+a.Dorado, a.Gris, a.Morado, a.Naranja, a.Negro, a.Otro, 
+a.Plateado, a.Rojo, a.Verde{
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    width: 7%;
+    margin: 0.5%;
+    text-align: center;
+    line-height: 3;
+    color: #000000;
+}
+
+a.Amarillo:active, a.Azul:active, a.Beige:active, a.Blanco:active, a.Cafã:active, a.Café:active, 
+a.Dorado:active, a.Gris:active, a.Morado:active, a.Naranja:active, a.Negro:active, a.Otro:active, 
+a.Plateado:active, a.Rojo:active, a.Verde:active {
+    border: 1px solid  blue;
+}
+
+/*Colores*/
+
+a.Amarillo{
+    background: #fffb66;
+}
+a.Azul{
+    background: #183d64;
+    color: white;
+}
+a.Beige{
+    background: #efce9a;
+}
+a.Blanco{
+    background: #ffffff;
+}
+a.Cafã{
+    background: #f9f9f9;
+}
+a.Café{
+    background: #795c32;
+}
+a.Dorado{
+    background: #efc870;
+}
+a.Gris{
+    background: #808080;
+}
+a.Morado{
+    background: #b05fb2;
+}
+a.Naranja{
+    background: #ea6c20;
+}
+a.Negro{
+    background: #000000;
+    color: #ffffff
+}
+a.Otro{
+    background: #f9f9f9;
+}
+a.Plateado{
+    background: #c0c0c0;
+}
+a.Rojo{
+    background: #f40706;
+}
+a.Verde{
+    background: #b7bc60;
+}
+
+a.Amarillo:hover, a.Azul:hover, a.Beige:hover, a.Blanco:hover, a.Cafã:hover, a.Café:hover, 
+a.Dorado:hover, a.Gris:hover, a.Morado:hover, a.Naranja:hover, a.Negro:hover, a.Otro:hover, 
+a.Plateado:hover, a.Rojo:hover, a.Verde:hover{
+    color:transparent;
+}

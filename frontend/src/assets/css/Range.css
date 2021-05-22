@@ -1,0 +1,30 @@
+.slider-parent{
+  position:relative;
+  margin: 2em 2em;
+  display: block;
+}
+
+.slidebar{
+  background: linear-gradient(to right, #82CFD0 0%, #82CFD0 50%, #fff 50%, #fff 100%);
+  border: solid 1px #82CFD0;
+  border-radius: 8px;
+  height: 7px;
+  width: 15%;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+}
+
+.slidebar::-webkit-slider-thumb {
+  cursor: pointer;
+}
+
+.buble{
+  position:absolute;
+  font-style: italic;
+}
+
+.buble2{
+  position:absolute;
+  font-style: italic;
+}
