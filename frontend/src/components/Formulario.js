@@ -6,8 +6,8 @@ const Formulario = () => {
         transmision: ' ',//automatico, standar hibirdo
         type: '',
         traccion: ' ',
-        hpower: ' ',
-        motor: ' ',
+        hpower: 0,
+        Motor: ' ',
         modelo: ' ',
         fuel: ' ',
         anio: 0,
@@ -48,6 +48,12 @@ const Formulario = () => {
             data.append("marca",imputs.marca);
             data.append("modelo",imputs.modelo);
             data.append("anio",imputs.anio);
+            data.append("trans",imputs.transmision);
+            data.append("type",imputs.type);
+            data.append("traccion",imputs.traccion);
+            data.append("hpower",imputs.hpower);
+            data.append("Motor",imputs.Motor);
+            data.append("fuel",imputs.fuel);
             fetch( "http://127.0.0.1:8000/cars/r",{
             method: "post",
             mode: "no-cors",
@@ -74,10 +80,16 @@ const Formulario = () => {
 
                 <label for="marca" ></label>
                     <select name="marca" id="marca" multiple onChange={handleInputChange}>
-                        <option value="1">Nissan</option>
-                        <option value="2">General Motors</option>
-                        <option value="3">Volkswagen</option>
-                        <option value="4">Toyota</option>
+                        <option value="Nissan">Nissan</option>
+                        <option value="General Motors">General Motors</option>
+                        <option value="Volkswagen">Volkswagen</option>
+                        <option value="Dodge">Dodge</option>
+                        <option value="Mazda">Mazda</option>
+                        <option value="Infiniti">Infiniti</option>
+                        <option value="Smart">Smart</option>
+                        <option value="Mitsubishi">Mitsubishi</option>
+                        <option value="Audi">Audi</option>
+                        <option value="Ford">Ford</option>
                     </select>   
 
 
@@ -90,45 +102,67 @@ const Formulario = () => {
                     <select name="modelo" id="modelo" multiple onChange={handleInputChange}>
                         <option value="Volvo">Volvo</option>
                         <option value="Saab">Saab</option>
-                        <option value="Opel">Opel</option>
-                        <option value="Bocho">Bocho</option>
+                        <option value="Charger R/T">Charger R/T</option>
+                        <option value="Sentra Sense">Sentra Sense</option>
+                        <option value="Lobo Crew Cab XLT">Lobo Crew Cab XLT</option>
+                        <option value="CX-5 | Grand Touring">CX-5 | Grand Touring</option>
+                        <option value="Fortwo Coupé">Fortwo Coupé</option>
+                        <option value="Model S 85 D">Model S 85 D</option>
+                        <option value="Jetta A6 Trendline">Jetta A6 Trendline</option>
+                        <option value="Q50 Perfection">Q50 Perfection</option>
                     </select>
                 </div>
                 <br></br>
                 <br></br>
+
                 <label>Transmission</label>
                 <div className= "col">
-                    <input type="text" 
-                    //placeholder="Modelo de auto" 
-                    name="transmision"
-                    onChange={handleInputChange}/>
+
+                <label for="transmision" ></label>
+                    <select name="transmision" id="transmision" multiple onChange={handleInputChange}>
+                        <option value="Manual">Manual</option>
+                        <option value="Automática">Automática</option>
+                    </select>
+
                 </div>
 
                 <br></br>
                 <br></br>
+
                 <label>Tipo de auto</label>
                 <div className= "col">
-                    <input type="text" 
-                    //placeholder="Modelo de auto" 
-                    name="type"
-                    onChange={handleInputChange}/>
+
+                <label for="Tipo de auto" ></label>
+                    <select name="type" id="type" multiple onChange={handleInputChange}>
+                        <option value="Sedán">Sedán</option>
+                        <option value="Coupé">Coupé</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Wagon">Wagon</option>
+                        <option value="Coupé">Coupé</option>
+                    </select>
+                    
                 </div>
 
                 <br></br>
                 <br></br>
+
+                
                 <label>Traccion</label>
                 <div className= "col">
-                    <input type="text" 
-                    //placeholder="Modelo de auto" 
-                    name="traccion"
-                    onChange={handleInputChange}/>
+
+                <label for="traccion" ></label>
+                    <select name="traccion" id="traccion" multiple onChange={handleInputChange}>
+                        <option value="4x2">4x2</option>
+                        <option value="4x4">4x4</option>
+                    </select>
+                    
                 </div>
 
                 <br></br>
                 <br></br>
                 <label>Poder</label>
                 <div className= "col">
-                    <input type="text" 
+                    <input type="number" 
                     //placeholder="Modelo de auto" 
                     name="hpower"
                     onChange={handleInputChange}/>
@@ -136,22 +170,31 @@ const Formulario = () => {
 
                 <br></br>
                 <br></br>
+
                 <label>Motor</label>
                 <div className= "col">
-                    <input type="text" 
-                    //placeholder="Modelo de auto" 
-                    name="motor"
-                    onChange={handleInputChange}/>
+                <label for="Motor" ></label>
+                    <select name="Motor" id="Motor" multiple onChange={handleInputChange}>
+                        <option value="1.6L 14">1.6L 14</option>
+                        <option value="5.7L V8">5.7L V8</option>
+                        <option value="Eléctrico">Eléctrico</option>
+                        <option value="1L I3">1L I3</option>
+                        <option value="2L TURBO">2L TURBO</option>
+
+                    </select>
                 </div>
 
                 <br></br>
                 <br></br>
+
                 <label>Gasolina que usa</label>
                 <div className= "col">
-                    <input type="text" 
-                    //placeholder="Modelo de auto" 
-                    name="fuel"
-                    onChange={handleInputChange}/>
+                <label for="fuel" ></label>
+                    <select name="fuel" id="fuel" multiple onChange={handleInputChange}>
+                        <option value="Diesel">Diesel</option>
+                        <option value="Gasolina">Gasolina</option>
+                        <option value="Eléctrico">Eléctrico</option>
+                    </select>
                 </div>
 
                 <br></br>
@@ -161,16 +204,6 @@ const Formulario = () => {
                     <input type="number" 
                     //placeholder="Modelo de auto" 
                     name="anio"
-                    onChange={handleInputChange}/>
-                </div>
-
-                <br></br>
-                <br></br>
-                <label>Estado</label>
-                <div className= "col">
-                    <input type="text" 
-                    //placeholder="Modelo de auto" 
-                    name="status"
                     onChange={handleInputChange}/>
                 </div>
 
@@ -186,22 +219,18 @@ const Formulario = () => {
 
                 <br></br>
                 <br></br>
+
                 <label>Ubicacion del auto</label>
                 <div className= "col">
-                    <input type="text" 
-                    //placeholder="Modelo de auto" 
-                    name="locacion"
-                    onChange={handleInputChange}/>
+                <label for="locacion" ></label>
+                    <select name="locacion" id="locacion" multiple onChange={handleInputChange}>
+                        <option value="KAVAK Puebla">KAVAK Puebla</option>
+                        <option value="KAVAK Puerta la Victoria">KAVAK Puerta la Victoria</option>
+                        <option value="KAVAK Midtown Guadalajara">KAVAK Midtown Guadalajara</option>
+                        <option value="Kavak Cancun">Kavak Cancun</option>
+                        <option value="KAVAK Monterrey">KAVAK Monterrey</option>
+                    </select>
                 </div>
-
-                <label>Id de informacion del auto</label>
-                <div className= "col">
-                    <input type="number" 
-                    name="car_infid"
-                    onChange={handleInputChange}/>
-                </div>
-                <br></br>
-                <br></br>
 
                 <br></br>
                 <br></br>
