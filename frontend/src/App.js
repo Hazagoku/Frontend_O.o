@@ -55,11 +55,18 @@ function App() {
           <Link to = "/Ver" className = "btn-dark">
             Ver
           </Link>
+          <Link to = "/tarjeta" className = "btn-dark">
+            tarjeta
+          </Link>
           
         </div>
         <Switch>
+        <Route path = "/tarjeta" exact>
+          <VehicleCard></VehicleCard>
+          </Route>
           <Route path = "/" exact>
             Inicio de la pagina
+            <Maker_model></Maker_model>
           </Route>
           <Route path = "/Agregar">
             
