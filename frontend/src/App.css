@@ -1,19 +1,19 @@
-.App {
-  text-align: center;
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
+.Filtros{
+    display: inline;
+}
 
-.btn-dark{
-  font-size: 12px;
-  width: auto;
-  justify-content: center;
-  color: white;
-  background-color: #0074D9;
-  float: right;
-  padding: 1px 32px;
-  text-decoration: none;
-  transition: background-color .3s;
-  list-style: none;
-  border: 1px solid #ddd;
-  margin: 0 4px;
+.barra_vertical{
+    position: absolute;
+    display:inline-block;
+    border: none;
+    border-left: 10px solid gray;
+    left: 40%;
+    height: 100vh;
 }
