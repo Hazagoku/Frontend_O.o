@@ -2,6 +2,7 @@ import React, {Fragment, useEffect, useState} from 'react';
 import '../assets/css/Paginacion.css';
 //import JsonData from "./MOCK_DATA.json";
 import ReactPaginate from "react-paginate";
+import VehicleCard from './VehicleCard.js';
 
 
 const Paginacion = () => {
@@ -29,18 +30,15 @@ const Paginacion = () => {
 
 
 
-    const usersPerPage = 2
+    const usersPerPage = 3
     const pagesVisited = pageNumber * usersPerPage
     const displayUsers = users
       .map((user) => {
         
         return(
           <div className="tarjeta">
-            <p>{user.km}</p>
-            <p>{user.color}</p>
-            <p>{user.brand}</p>
-            <p>{user.model}</p>
-            <p>{user.year}</p>
+            <VehicleCard name="hola que tal amigos" brand = {user.brand} model = {user.model} price = {user.price}
+              year = {user.year} transmi = {user.transmi} city = {user.city}/>
           </div>
         );
         })

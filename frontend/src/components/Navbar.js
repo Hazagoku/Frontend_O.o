@@ -9,7 +9,7 @@ const Navbar = () => {
         {title: "Compra un auto", url: "/", name: "nav_links"},
         {title: "Carrito", url: "./VehicleCard", name: "nav_links"},
         {title: "Añadir carro", url: "./Formulario", name: "nav_links"},
-        {title: "Tampoco c", url: "#", name: "nav_links"}
+        {title: "Paginacion", url: "./Paginacion", name: "nav_links"}
     ]
 
     return(

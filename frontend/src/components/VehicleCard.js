@@ -2,7 +2,7 @@ import React from 'react';
 import '../assets/css/VehicleCard.css';
 import icono from "../assets/images/icon_fav.png"
 
-const VehicleCard = () =>{
+const VehicleCard = (props) => {
 
     var precio = "234,999";
     var marca = "Nissan";
@@ -18,16 +18,16 @@ const VehicleCard = () =>{
                 <img src={icono} alt = "icono de favorito"/>
             </div>
             <div className="precio">
-                {"$" + precio}
+                {props.price}
             </div>
             <div className="marca-modelo">
-                {marca + " " + modelo}
+                {props.brand} {props.model}
             </div>
             <div className="anio-trans">
-                {year + " | " + transmision}
+                {props.year} {props.transmi}
             </div>
             <div className="ciudad">
-                {ciudad}
+                {props.city}
             </div>
             <div className="mensualidad">
                 {"Desde $" + mensualidad + " al mes"}
