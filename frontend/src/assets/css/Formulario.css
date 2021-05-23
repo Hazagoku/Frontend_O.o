@@ -1,0 +1,77 @@
+.contenedor_form{
+    margin-left: 20%;
+    margin-top: 2.5%;
+    margin-right: 20%;
+    display:inline-block;
+}
+
+.titulo_form{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+
+.button_form{
+    background-color: #3374db; /* Green */
+    border-radius: 10px;
+    border: none;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 45%;
+    margin-top: 2.5%;
+    line-height: 150%;
+}
+
+.col{
+    margin-bottom: 2.5%;
+}
+
+.text_form{
+    border: none;
+    border-bottom: 2px solid black;
+    margin: auto;
+    display: block;
+    text-align: center;
+    line-height: 150%;
+}
+
+.text_form:hover{
+    outline: none;
+    border-bottom: 2px solid #3374db;
+}
+
+.label_form{
+    display: block;
+    text-align: center;
+    line-height: 150%;
+    color: #3374db;
+    font-weight: bold;
+}
+
+.button_form:hover{
+    background-color: #1f488a;
+}
+
+.button_form:active{
+    background-color: #3374db;
+}
+
+select {
+    margin: 50px;
+    width: 150px;
+    padding: 5px 35px 5px 5px;
+    font-size: 16px;
+    border: 1px solid #CCC;
+    height: 34px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  select::-ms-expand {
+    display: none; /* Remove default arrow in Internet Explorer 10 and 11 */
+}
