@@ -7,7 +7,6 @@ const Navbar = () => {
 
     const MenuItems = [
         {title: "Compra un auto", url: "/", name: "nav_links"},
-        {title: "Carrito", url: "./VehicleCard", name: "nav_links"},
         {title: "Añadir carro", url: "./Formulario", name: "nav_links"},
         {title: "Paginacion", url: "./Paginacion", name: "nav_links"}
     ]
